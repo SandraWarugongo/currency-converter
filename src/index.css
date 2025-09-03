@@ -2,11 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 🌸 Global font and background */
+/* COMPLETE BACKGROUND RESET */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: none !important;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
 body {
-  @apply font-sans bg-gradient-to-br from-pink-100 via-purple-100 to-indigo-100 text-gray-800;
-  margin: 0;
-  padding: 0;
+  @apply font-sans;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  min-height: 100vh !important;
+  height: 100%;
+}
+
+#root {
+  background: none !important;
+  min-height: 100vh !important;
+  height: 100%;
+}
+
+.App {
+  background: none !important;
+  min-height: 100vh !important;
+  height: 100%;
+}
+
+/* Force Tailwind gradient backgrounds to display */
+.min-h-screen {
+  min-height: 100vh !important;
+  background-attachment: scroll !important;
+}
+
+/* Override any potential conflicting styles */
+div[class*="bg-gradient"] {
+  background-attachment: scroll !important;
 }
 
 /* 🌈 Headings */
